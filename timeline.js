@@ -122,6 +122,8 @@
         if (self.options.timeline.backgroundImage !== undefined) {
           self.setBackgroundImage(self.options.timeline.backgroundImage);
         }
+
+        document.dispatchEvent(new Event("fullyloaded", { container: $container }));
       });
     }
     else {
